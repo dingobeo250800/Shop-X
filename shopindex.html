@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./shop.css/css.css">
+    <link rel="stylesheet" href="./js/app.js">
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
+        integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+        crossorigin="anonymous"></script>
+    <!-- W3 school -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap"
+        rel="stylesheet">
+    <title>ShopLai</title>
+</head>
+
+<body>
+    <div class="wrap-Header">
+        <div id="info" class="title-dialog align-items-center justify-content-center ">
+            <p class=" mb-0 text-center">Join our showroom and get 20 % off ! Coupon code : Hebe20</p>
+            <i id="title-x" onclick="closeInfo()" class="fas fa-times"></i>
+        </div>
+        <!-- banner-y -->
+        <div id="onscroll-Event" class="container-fluid  px-0 ">
+            <div class="container banner-y">
+                <div class="row banner-y-header d-flex align-items-center justify-content-between">
+                    <div class="col-3 d-flex align-items-center justify-content-start">
+                        <form class="banner-y wrap_Form-Seach d-flex">
+                            <div class="nav-mb d-flex flex-column mr-3" onclick="openMenu()">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                            <div class="search-mb">
+                                <i class="fas fa-search"></i>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-6 d-flex justify-content-center align-items-center">
+                        <ul class="wrap-nav">
+                            <li class="item-li"><a href="" class="text-li"><img src="./img/logo.webp" alt="logo"></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-3 header-right d-flex justify-content-end align-items-center">
+                        <div class="headerContent-Nav-ul dropdownUser">
+                            <button class="btn btn-primary btn-use" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal">
+                                <img src="./img/i.png" alt="">
+                            </button>
+                        </div>
+                        <div class="headerContent-Nav-ul dropdownShop">
+                            <img src="./img/Shop.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- sideBar -->
+        <div class="sidebar-on_off">
+            <div class="w3-sidebar w3-bar-block w3-card w3-animate-left " style="display:none; width: 300px; top: 0;"
+                id="leftMenu">
+                <div class="side-menu side-menu-title">Menu</div>
+                <div class="side-menu d-flex justify-content-between align-items-center">
+                    <a href="#" class=" ">HOME</a>
+                    <div class="side-menu-arrow"></div>
+                </div>
+                <div class="side-menu d-flex justify-content-between align-items-center">
+                    <a href="#" class=" ">SHOP</a>
+                    <div class="side-menu-arrow"></div>
+                </div>
+                <div class="side-menu d-flex justify-content-between align-items-center">
+                    <a href="#" class=" ">ELEMENTS</a>
+                    <div class="side-menu-arrow"></div>
+                </div>
+                <div class="side-menu d-flex justify-content-between align-items-center">
+                    <a href="#" class=" ">pages</a>
+                    <div class="side-menu-arrow"></div>
+                </div>
+                <div class="side-menu d-flex justify-content-between align-items-center">
+                    <a href="#" class=" ">blog</a>
+                    <div class="side-menu-arrow"></div>
+                </div>
+                <div class="side-menu d-flex justify-content-between align-items-center">
+                    <a href="#" class=" ">megamenu</a>
+                    <div class="side-menu-arrow"></div>
+                </div>
+                <div onclick="closeMenu()" class="side-menu side-menu-close"><i class="fas fa-times"></i></div>
+            </div>
+        </div>
+        <!-- banner-x onscrolll -->
+        <div id="onscroll-Event" class="container-fluid  px-0 ">
+            <div class="container banner-x">
+                <div class="row banner-x-header d-flex align-items-center justify-content-between">
+                    <div class="col-3 d-flex align-items-center justify-content-start">
+                        <form class=" wrap_Form-Seach">
+                            <img class="wrap_Form-Seach img-Search" src="./img/seach.jpg" alt="serach">
+                            <input type="text" class="input" name="search" id="search" placeholder="Search...">
+                        </form>
+                    </div>
+                    <div class="col-6 d-flex justify-content-center align-items-center">
+                        <ul class="wrap-nav">
+                            <li class="item-li"><a href="" class="text-li">HOME</a></li>
+                            <li class="item-li"><a href="" class="text-li">SHOP</a></li>
+                            <li class="item-li"><a href="" class="text-li">ELEMENTS</a></li>
+                            <li class="li-icon"><a href="" class="text-li"><img src="./img/logo.webp" alt="logo"></a>
+                            </li>
+                            <li class="item-li"><a href="" class="text-li">PAGES</a></li>
+                            <li class="item-li"><a href="" class="text-li">BLOG</a></li>
+                            <li class="item-li"><a href="" class="text-li">MEGAMENU</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-3 header-right d-flex justify-content-end align-items-center">
+                        <div class="dropdown">
+                            <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                                data-bs-toggle="dropdown" aria-expanded="false" style="box-shadow: none;">
+                                <img src="./img/usa.jpg" alt="">
+                            </a>
+
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                <li><a class="dropdown-item" href="#"><img src="./img/usa.jpg" alt=""></a></li>
+                            </ul>
+                        </div>
+                        <div class="headerContent-Nav-ul dropdownUser">
+                            <button class="btn btn-primary btn-use" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal">
+                                <img src="./img/i.png" alt="">
+                            </button>
+                        </div>
+                        <div class="headerContent-Nav-ul dropdownShop">
+                            <img src="./img/Shop.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal-lg -->
+        <div class="modal fade " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content ">
+                    <div class="modal-header">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="login-icon">
+                            <i class="far fa-user"></i>
+                        </div>
+                        <div class="login-p">
+                            <p>Create an account to expedite future checkouts, track order
+                                <br> history & receive emails,
+                                discounts, & special offers
+                            </p>
+                        </div>
+                        <div class="login-form">
+                            <input type="text" placeholder="username">
+                        </div>
+                        <div class="login-form1">
+                            <input type="password" placeholder="password?">
+                        </div>
+                        <div class="remember-pass">
+                            <div class="remember">
+                                <div class="remember-span"></div>
+                                <p>Remember me</p>
+                            </div>
+                            <div class="pass ">
+                                <p>Lost your password?</p>
+                            </div>
+                        </div>
+                        <div class="login">LOGIN</div>
+                        <div class="spec">
+                            <span>OR</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- h1-shopppppp -->
+        <div class="shop-h1">
+            <h1>Shop</h1>
+            <div class="shop-span d-flex justify-content-center align-items-center">
+                <span>Home</span>
+                <div></div>
+                <span>Shop</span>
+            </div>
+        </div>
+    </div>
+    <main>
+        <div class="container container-fluid">
+            <div class="row">
+                <div class="col-lg-3 sidebar">
+                    <form action="#" class="list_Group">
+                        <!-- creatoryss -->
+                        <div class="list_Group-item menu-creatory d-flex align-items-center">
+                            <div class="menu-creatory_all">
+                                <div class="menu-creatory_one"></div>
+                                <div class="menu-creatory_tow"></div>
+                                <div class="menu-creatory_three"></div>
+                            </div>
+                            <div class="menu-creatory_p">CREATORYS</div>
+                        </div>
+                        <div
+                            class="list_Group-item list_Group-item-action d-flex align-items-center justify-content-between">
+                            <label for='HebeStaffPick' class="">HebeStaff Pick</label>
+                            <div class="HebeStaffPick_div"></div>
+                        </div>
+                        <div
+                            class="list_Group-item list_Group-item-action d-flex align-items-center justify-content-between">
+                            <label for='HebeStaffPick' class="">New</label>
+                            <div class="HebeStaffPick_div"></div>
+                        </div>
+                        <div
+                            class="list_Group-item list_Group-item-action d-flex align-items-center justify-content-between">
+                            <label for='HebeStaffPick' class="">Women</label>
+                            <div class="HebeStaffPick_div"></div>
+                        </div>
+                        <div
+                            class="list_Group-item list_Group-item-action d-flex align-items-center justify-content-between">
+                            <label for='HebeStaffPick' class="">Men</label>
+                            <div class="HebeStaffPick_div"></div>
+                        </div>
+                        <div
+                            class="list_Group-item list_Group-item-action d-flex align-items-center justify-content-between">
+                            <label for='HebeStaffPick' class="">Girls</label>
+                            <div class="HebeStaffPick_div"></div>
+                        </div>
+                        <div
+                            class="list_Group-item list_Group-item-action d-flex align-items-center justify-content-between">
+                            <label for='HebeStaffPick' class="">Boys</label>
+                            <div class="HebeStaffPick_div"></div>
+                        </div>
+                        <div
+                            class="list_Group-item list_Group-item-action d-flex align-items-center justify-content-between">
+                            <label for='HebeStaffPick' class="">Plus size</label>
+                            <div class="HebeStaffPick_div"></div>
+                        </div>
+                        <div
+                            class="list_Group-item list_Group-item-action d-flex align-items-center justify-content-between">
+                            <label for='HebeStaffPick' class="">Edits</label>
+                            <div class="HebeStaffPick_div"></div>
+                        </div>
+                        <!-- colorr -->
+                        <div class="list_Group-item list_Group-item-action title">COlOR</div>
+                        <div class="title-color">
+                            <label class="title-color_label">
+                                <input type="checkbox" name="">
+                                <div class="item-color"></div>
+                            </label>
+                            <label class="title-color_label">
+                                <input type="checkbox" name="">
+                                <div class="item-color"></div>
+                            </label> <label class="title-color_label">
+                                <input type="checkbox" name="">
+                                <div class="item-color"></div>
+                            </label> <label class="title-color_label">
+                                <input type="checkbox" name="">
+                                <div class="item-color"></div>
+                            </label> <label class="title-color_label">
+                                <input type="checkbox" name="">
+                                <div class="item-color"></div>
+                            </label> <label class="title-color_label">
+                                <input type="checkbox" name="">
+                                <div class="item-color"></div>
+                            </label> <label class="title-color_label">
+                                <input type="checkbox" name="">
+                                <div class="item-color"></div>
+                            </label> <label class="title-color_label">
+                                <input type="checkbox" name="">
+                                <div class="item-color"></div>
+                            </label>
+                        </div>
+                        <!-- price -->
+                        <div class="list_Group-item list_Group-item-action title">PRICE</div>
+                        <div class="title-color">
+                        </div>
+                        <!-- size -->
+                        <div class="list_Group-item list_Group-item-action title">SIZE</div>
+                        <div class="title-color d-flex flex-wrap">
+                            <label class="title-size_label">
+                                <input type="checkbox" name="">
+                                <div class="item-size">
+                                    <p>S</p>
+                                </div>
+                            </label>
+                            <label class="title-size_label">
+                                <input type="checkbox" name="">
+                                <div class="item-size">
+                                    <p>M</p>
+                                </div>
+                            </label>
+                            <label class="title-size_label">
+                                <input type="checkbox" name="">
+                                <div class="item-size">
+                                    <p>L</p>
+                                </div>
+                            </label>
+                            <label class="title-size_label">
+                                <input type="checkbox" name="">
+                                <div class="item-size">
+                                    <p>XL</p>
+                                </div>
+                            </label>
+                            <label class="title-size_label">
+                                <input type="checkbox" name="">
+                                <div class="item-size">
+                                    <p>XXL</p>
+                                </div>
+                            </label>
+                        </div>
+                        <!-- pricee -->
+                        <div class="list_Group-item list_Group-item-action title">PRICE</div>
+                        <div class="title-color">
+                            <div class="title-price_label">
+                                <p style="margin-top: 12px;">None</p>
+                                <p>Popularyty</p>
+                                <p>Average rating</p>
+                                <p>Newness</p>
+                                <p>Price: low to hight</p>
+                                <p>Price: hight to low</p>
+                            </div>
+                        </div>
+                        <!-- theMen -->
+                        <div class="list_Group-item list_Group-item-action theMen">
+                            <div class="caption_theMen">
+                            </div>
+                            <div class="title-theMen">
+                                <P>spring</P>
+                                <h2>Conlection</h2>
+                                <a href="">shop now</a>
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+                <div class="col-lg-9 content">
+                    <div class="fillter-option d-flex justify-content-between flex-wrap">
+                        <div class="fillter d-flex align-items-center flex-wrap">
+                            <div class="fillter-icon"><img src="./img/Shape1.png" alt=""></div>
+                            <div class="fillter-h4">Fillter</div>
+                            <div class="fillter-h5 d-flex flex-wrap">
+                                <div>&times; Popularity</div>
+                                <div>&times; Neon Green</div>
+                            </div>
+                        </div>
+                        <div class="option-all d-flex align-items-center">
+                            <div class="ot small"><img src="./img/5.jpg" alt=""></div>
+                            <div class="ot small"><img src="./img/3.jpg" alt=""></div>
+                            <div class="ot small"><img src="./img/4.jpg" alt=""></div>
+                            <div class="options">
+                                <select>
+                                    <option value="0">Sort by popularity</option>
+                                    <option value="1">Raring</option>
+                                    <option value="2">Newnest</option>
+                                    <option value="2">Price:low</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row product">
+                        <div class="col-md-4 col-sm-6 product-margin">
+                            <div class="product-wrap">
+                                <img class="product-wrap_Img" src="./img/khan.jpg" alt="">
+
+                                <div class="product-item">
+                                    <div class="p-control-item"><i class="far fa-heart"></i></div>
+                                    <div class="p-control-item p-item_Seach"><i class="fas fa-search"></i></div>
+                                    <div class="p-control-item"><i class="fas fa-shopping-bag"></i></div>
+                                </div>
+                            </div>
+                            <div class="p-title">
+                                <h5 class="p-title p-title-h5">Women fdyse classic outer</h5>
+                                <p class="p-title p-title-p">$ 320.00</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6 product-margin">
+                            <div class="product-wrap">
+                                <img class="product-wrap_Img" src="./img/quan.jpg" alt="">
+
+                                <div class="product-item">
+                                    <div class="p-control-item"><i class="far fa-heart"></i></div>
+                                    <div class="p-control-item p-item_Seach"><i class="fas fa-search"></i></div>
+                                    <div class="p-control-item"><i class="fas fa-shopping-bag"></i></div>
+                                </div>
+                            </div>
+                            <div class="p-title">
+                                <h5 class="p-title p-title-h5">Women fdyse classic outer</h5>
+                                <p class="p-title p-title-p">$ 320.00</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6 product-margin">
+                            <div class="product-wrap">
+                                <img class="product-wrap_Img" src="./img/gaiy.jpg" alt="">
+
+                                <div class="product-item">
+                                    <div class="p-control-item"><i class="far fa-heart"></i></div>
+                                    <div class="p-control-item p-item_Seach"><i class="fas fa-search"></i></div>
+                                    <div class="p-control-item"><i class="fas fa-shopping-bag"></i></div>
+                                </div>
+                            </div>
+                            <div class="p-title">
+                                <h5 class="p-title p-title-h5">Women fdyse classic outer</h5>
+                                <p class="p-title p-title-p">$ 320.00</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6 product-margin">
+                            <div class="product-wrap">
+                                <img class="product-wrap_Img" src="./img/aotrang.jpg" alt="">
+
+                                <div class="product-item">
+                                    <div class="p-control-item"><i class="far fa-heart"></i></div>
+                                    <div class="p-control-item p-item_Seach"><i class="fas fa-search"></i></div>
+                                    <div class="p-control-item"><i class="fas fa-shopping-bag"></i></div>
+                                </div>
+                            </div>
+                            <div class="p-title">
+                                <h5 class="p-title p-title-h5">Women fdyse classic outer</h5>
+                                <p class="p-title p-title-p">$ 320.00</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6 product-margin">
+                            <div class="product-wrap">
+                                <img class="product-wrap_Img" src="./img/canuoc.jpg" alt="">
+
+                                <div class="product-item">
+                                    <div class="p-control-item"><i class="far fa-heart"></i></div>
+                                    <div class="p-control-item p-item_Seach"><i class="fas fa-search"></i></div>
+                                    <div class="p-control-item"><i class="fas fa-shopping-bag"></i></div>
+                                </div>
+                            </div>
+                            <div class="p-title">
+                                <h5 class="p-title p-title-h5">Women fdyse classic outer</h5>
+                                <p class="p-title p-title-p">$ 320.00</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6 product-margin">
+                            <div class="product-wrap">
+                                <img class="product-wrap_Img" src="./img/aoden.jpg" alt="">
+
+                                <div class="product-item">
+                                    <div class="p-control-item"><i class="far fa-heart"></i></div>
+                                    <div class="p-control-item p-item_Seach"><i class="fas fa-search"></i></div>
+                                    <div class="p-control-item"><i class="fas fa-shopping-bag"></i></div>
+                                </div>
+                            </div>
+                            <div class="p-title">
+                                <h5 class="p-title p-title-h5">Women fdyse classic outer</h5>
+                                <p class="p-title p-title-p">$ 320.00</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6 product-margin">
+                            <div class="product-wrap">
+                                <img class="product-wrap_Img" src="./img/giaytrang.jpg" alt="">
+
+                                <div class="product-item">
+                                    <div class="p-control-item"><i class="far fa-heart"></i></div>
+                                    <div class="p-control-item p-item_Seach"><i class="fas fa-search"></i></div>
+                                    <div class="p-control-item"><i class="fas fa-shopping-bag"></i></div>
+                                </div>
+                            </div>
+                            <div class="p-title">
+                                <h5 class="p-title p-title-h5">Women fdyse classic outer</h5>
+                                <p class="p-title p-title-p">$ 320.00</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6 product-margin">
+                            <div class="product-wrap">
+                                <img class="product-wrap_Img" src="./img/aovang.jpg" alt="">
+
+                                <div class="product-item">
+                                    <div class="p-control-item"><i class="far fa-heart"></i></div>
+                                    <div class="p-control-item p-item_Seach"><i class="fas fa-search"></i></div>
+                                    <div class="p-control-item"><i class="fas fa-shopping-bag"></i></div>
+                                </div>
+                            </div>
+                            <div class="p-title">
+                                <h5 class="p-title p-title-h5">Women fdyse classic outer</h5>
+                                <p class="p-title p-title-p">$ 320.00</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6 product-margin">
+                            <div class="product-wrap">
+                                <img class="product-wrap_Img" src="./img/nen.jpg" alt="">
+
+                                <div class="product-item">
+                                    <div class="p-control-item"><i class="far fa-heart"></i></div>
+                                    <div class="p-control-item p-item_Seach"><i class="fas fa-search"></i></div>
+                                    <div class="p-control-item"><i class="fas fa-shopping-bag"></i></div>
+                                </div>
+                            </div>
+                            <div class="p-title">
+                                <h5 class="p-title p-title-h5">Women fdyse classic outer</h5>
+                                <p class="p-title p-title-p">$ 320.00</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6 product-margin">
+                            <div class="product-wrap">
+                                <img class="product-wrap_Img" src="./img/aoxanh.jpg" alt="">
+
+                                <div class="product-item">
+                                    <div class="p-control-item"><i class="far fa-heart"></i></div>
+                                    <div class="p-control-item p-item_Seach"><i class="fas fa-search"></i></div>
+                                    <div class="p-control-item"><i class="fas fa-shopping-bag"></i></div>
+                                </div>
+                            </div>
+                            <div class="p-title">
+                                <h5 class="p-title p-title-h5">Women fdyse classic outer</h5>
+                                <p class="p-title p-title-p">$ 320.00</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6 product-margin">
+                            <div class="product-wrap">
+                                <img class="product-wrap_Img" src="./img/book.jpg" alt="">
+
+                                <div class="product-item">
+                                    <div class="p-control-item"><i class="far fa-heart"></i></div>
+                                    <div class="p-control-item p-item_Seach"><i class="fas fa-search"></i></div>
+                                    <div class="p-control-item"><i class="fas fa-shopping-bag"></i></div>
+                                </div>
+                            </div>
+                            <div class="p-title">
+                                <h5 class="p-title p-title-h5">Women fdyse classic outer</h5>
+                                <p class="p-title p-title-p">$ 320.00</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6 product-margin">
+                            <div class="product-wrap">
+                                <img class="product-wrap_Img" src="./img/balo.jpg" alt="">
+
+                                <div class="product-item">
+                                    <div class="p-control-item"><i class="far fa-heart"></i></div>
+                                    <div class="p-control-item p-item_Seach"><i class="fas fa-search"></i></div>
+                                    <div class="p-control-item"><i class="fas fa-shopping-bag"></i></div>
+                                </div>
+                            </div>
+                            <div class="p-title">
+                                <h5 class="p-title p-title-h5">Women fdyse classic outer</h5>
+                                <p class="p-title p-title-p">$ 320.00</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="page-nav-wrap">
+                        <div class="page-nav">1</div>
+                        <div class="page-nav">2</div>
+                        <div class="page-nav">3</div>
+                        <div class="page-nav">
+                            <div class="page-next"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class=" footer-fluid">
+            <div class=" container footer-container">
+                <div class=" row container footer-row d-flex align-items-center px-0 mg-0">
+                    <div class="col-lg-4 col-md-6 order-lg-1 order-2 footer-Infomation">
+                        <div class="infomation-head d-flex align-items-center justify-content-between">
+                            <div class="col-6 Infomation_Compani ">
+                                <p class="p-info">COMPANI</p>
+                                <p>Our story</p>
+                                <p>Eureka</p>
+                                <p>Projects</p>
+                                <p>Thinkers</p>
+                            </div>
+                            <div class="col-6 Infomation_Compani ">
+                                <p class="p-info">INFOMATION</p>
+                                <p>Help</p>
+                                <p>Feedback</p>
+                                <p>Returns</p>
+                                <p>Press</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-12 order-lg-2 order-1 footer-logo">
+                        <div class="logo-bewwen">
+                            <img src="./img/logo.webp" alt="">
+                            <p class="p-1">hebe</p>
+                            <p class="p-2">MINIMAL SHOP</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 order-lg-3 order-3 footer-submit">
+                        <div class="submit-right text-center">
+                            <p>Don't miss out on the latest.</p>
+                            <span>Get notified of new products, limited releases, and more.</span>
+                            <div class="btn-input d-flex justify-content-center ">
+                                <input type="text" class="input-submit" placeholder="Email Address">
+                                <button class="btn-submit">SUBMIT</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="footer-end ">
+            <div class="container container-footer-end flex-wrap">
+                <div class="col-lg-4 col-md-6 circle d-flex mx-auto">
+                    <div class="circle-icon">
+                        <a href=""><i class="fab fa-twitter"></i></a>
+                    </div>
+                    <div class="circle-icon">
+                        <a href=""><i class="fab fa-dribbble"></i></a>
+                    </div>
+                    <div class="circle-icon">
+                        <a href=""><i class="fab fa-behance"></i></a>
+                    </div>
+                    <div class="circle-icon">
+                        <a href=""><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 text-center mx-auto text-secondary">
+                    © 2018 Famithemes. All rights reserved
+                </div>
+                <div class="col-lg-4 img-payment d-flex justify-content-end mx-auto">
+                    <img src="./img/payment-img.png" alt="">
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="./js/app.js"></script>
+</body>
+
+</html>
